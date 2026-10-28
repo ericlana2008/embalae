@@ -358,7 +358,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                       type="email"
                       value={supabaseEmail}
                       onChange={(e) => setSupabaseEmail(e.target.value)}
-                      placeholder="admin@embalae.com"
+                      placeholder="admin@exemplo.com"
                       className="w-full h-10 pl-3 pr-3 text-xs bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-orange-500 outline-none"
                       required
                       autoFocus
@@ -643,7 +643,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                     type="email"
                     value={supabaseEmail}
                     onChange={(e) => setSupabaseEmail(e.target.value)}
-                    placeholder="admin@embalae.com"
+                    placeholder="admin@exemplo.com"
                     className="w-full h-10 px-3 text-xs bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:border-orange-500 outline-none"
                     required
                     autoFocus

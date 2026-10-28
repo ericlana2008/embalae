@@ -164,6 +164,26 @@ export default function App() {
     };
   }, []);
 
+  // Dynamically update document title and favicon based on distributor config
+  useEffect(() => {
+    if (config.name && config.name.trim()) {
+      document.title = config.name.trim();
+    } else {
+      document.title = 'Catálogo de Produtos';
+    }
+
+    const favicon = document.querySelector<HTMLLinkElement>("link[rel*='icon']");
+    if (favicon) {
+      if (config.logoImage && config.logoImage.trim()) {
+        favicon.href = config.logoImage;
+        favicon.type = 'image/png';
+      } else {
+        favicon.href = '/favicon.svg';
+        favicon.type = 'image/svg+xml';
+      }
+    }
+  }, [config.name, config.logoImage]);
+
   const handleSelectCategory = (category: Category) => {
     setSelectedCategory(category);
     setIsCategoryModalOpen(true);
